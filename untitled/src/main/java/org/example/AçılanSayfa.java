@@ -9,11 +9,35 @@ public class AçılanSayfa implements ActionListener
 {
     JFrame frame = new JFrame();
 
+    JLabel labelisim = new JLabel("İsim : "+"Halilişko");
+    JLabel labelmemleket = new JLabel("Memleket : "+"KÜRDİSTAN");
+    JLabel labelmeslek = new JLabel("Meslek : "+"Patatesci");
+
+    JButton button = new JButton("Kapat");
+
+    JLabel imagelabel = new JLabel();
+
     public AçılanSayfa()
     {
+        ImageIcon ıcon = new ImageIcon("halilişko.jpg");
+        Image icon = ıcon.getImage().getScaledInstance(150,150,Image.SCALE_SMOOTH);
+        ImageIcon newicon = new ImageIcon(icon);
+
+
+        imagelabel.setIcon(newicon);
+
         frame.setSize(420,420);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new GridLayout(1,2));
+
+        button.addActionListener(this);
+        button.setFont(new Font("Arial",Font.PLAIN,20));
+        button.setFocusable(false);
+
+
+        labelisim.setFont(new Font("Arial",Font.PLAIN,20));
+        labelmemleket.setFont(new Font("Arial",Font.PLAIN,17));
+        labelmeslek.setFont(new Font("Arial",Font.PLAIN,20));
 
 
 
