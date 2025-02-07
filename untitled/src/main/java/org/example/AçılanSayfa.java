@@ -61,7 +61,13 @@ public class AçılanSayfa implements ActionListener
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e)
+    {
+        if (e.getSource() == button)
+        {
+            frame.dispose();
+
+        }
 
     }
 }
