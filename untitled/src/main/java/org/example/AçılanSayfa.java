@@ -17,6 +17,9 @@ public class AçılanSayfa implements ActionListener
 
     JLabel imagelabel = new JLabel();
 
+    JPanel panel2 = new JPanel();
+    JPanel panel1 = new JPanel();
+
     public AçılanSayfa()
     {
         ImageIcon ıcon = new ImageIcon("halilişko.jpg");
@@ -38,6 +41,18 @@ public class AçılanSayfa implements ActionListener
         labelisim.setFont(new Font("Arial",Font.PLAIN,20));
         labelmemleket.setFont(new Font("Arial",Font.PLAIN,17));
         labelmeslek.setFont(new Font("Arial",Font.PLAIN,20));
+
+        panel2.setLayout(new GridLayout(4,1));
+        panel1.add(imagelabel);
+
+
+        panel2.add(labelisim);
+        panel2.add(labelmemleket);
+        panel2.add(labelmeslek);
+        panel2.add(button);
+
+        frame.add(panel1);
+        frame.add(panel2);
 
 
 
